@@ -11,7 +11,7 @@ class CoffeeApp(QtWidgets.QMainWindow):
         self.load_data()
 
     def load_data(self):
-        connection = sqlite3.connect('coffee.sqlite')
+        connection = sqlite3.connect('coffee.sql')
         cursor = connection.cursor()
         cursor.execute("SELECT * FROM coffee")
         records = cursor.fetchall()
